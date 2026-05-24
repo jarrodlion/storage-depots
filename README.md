@@ -16,4 +16,3 @@ Your landing catalog website will be live in 1-2 minutes at:
 `https://<your-username>.github.io/<your-repo-name>/`
 
 ---
-⚡ Packaged automatically by Store Depot Build Exporter.
