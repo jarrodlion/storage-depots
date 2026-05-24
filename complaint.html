@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Complaint - Storage Depot Help Desk</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+
+  <header class="bg-gray-900 text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-3">
+          <div class="bg-blue-600 p-2 rounded-lg text-white">
+            <i data-lucide="database" class="w-6 h-6"></i>
+          </div>
+          <span class="font-bold text-xl tracking-tight bg-gradient-to-r from-blue-400 to-indigo-300 bg-clip-text text-transparent">
+            Storage Depot
+          </span>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="index.html" class="hover:text-blue-400 transition-colors duration-150 font-medium text-gray-300">Home</a>
+          <a href="contact.html" class="hover:text-blue-400 transition-colors duration-150 font-medium text-gray-300">Contact Us</a>
+          <a href="complaint.html" class="hover:text-blue-400 transition-colors duration-150 font-medium text-blue-400">File Complaint</a>
+        </nav>
+        <div class="flex md:hidden">
+          <button id="menu-btn" type="button" class="text-gray-400 hover:text-white focus:outline-none">
+            <i data-lucide="menu" id="hamburger-icon" class="w-6 h-6"></i>
+            <i data-lucide="x" id="close-icon" class="w-6 h-6 hidden"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700 px-2 pt-2 pb-4 space-y-1">
+      <a href="index.html" class="block px-3 py-2 rounded-md font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
+      <a href="contact.html" class="block px-3 py-2 rounded-md font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact Us</a>
+      <a href="complaint.html" class="block px-3 py-2 rounded-md font-medium text-white bg-gray-900">File Complaint</a>
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-2xl mx-auto px-4 py-12 flex flex-col justify-center items-center w-full">
+    
+    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 sm:p-10 space-y-6 w-full">
+      <div class="text-center">
+        <div class="inline-flex items-center justify-center bg-red-100 text-red-650 rounded-full p-3 mb-3 text-red-650">
+          <i data-lucide="alert-triangle" class="w-8 h-8 text-red-600"></i>
+        </div>
+        <h1 class="text-3xl font-extrabold text-gray-900">Storage Resolutions & Complaints Desk</h1>
+        <p class="text-sm text-gray-500 mt-2">Did your memstick fail? Delivery transit delayed? Submit detail notes directly into our resolution ticket organizer below.</p>
+      </div>
+
+      <form action="complaint-submitted.html" method="GET" class="space-y-6">
+        
+        <!-- Customer Complaint Blank Big Box -->
+        <div class="space-y-1.5">
+          <label for="complainBox" class="block text-sm font-semibold text-gray-700">Write Your Problem / Complaint details</label>
+          <p class="text-xs text-gray-400">Please provide maximum detail like serial numbers or delivery IDs for instantaneous automation processing.</p>
+          <textarea id="complainBox" name="complainBox" required rows="8" placeholder="Please describe the exact details of your issue here. Let us know what hardware or order is affected..."
+                    class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 shadow-sm focus:border-red-500 focus:ring-1 focus:ring-red-500 focus:outline-none text-sm leading-relaxed"></textarea>
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center space-x-2">
+            <i data-lucide="send" class="w-5 h-5"></i>
+            <span>Submit Official Complaint</span>
+          </button>
+        </div>
+
+      </form>
+      
+      <div class="bg-red-50 border border-red-100 rounded-lg p-4 text-left text-xs text-red-800 space-y-1">
+        <p class="font-bold">Automated Resolution Guarantee:</p>
+        <p class="text-red-700">We respond to all complaints within 4 standard business hours. If we cannot resolve your hardware memory failure, we provide free immediate cross-ship returns plus 20% discount credits.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs">
+      <p>&copy; 2026 Memory & Storage Depot. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    menuBtn?.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      if (isHidden) {
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      } else {
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

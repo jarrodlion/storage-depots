@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aegis Shield Keypad Encrypted USB Drive - Storage Depot</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+
+  <header class="bg-gray-900 text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-3">
+          <div class="bg-blue-600 p-2 rounded-lg text-white">
+            <i data-lucide="database" class="w-6 h-6"></i>
+          </div>
+          <span class="font-bold text-xl tracking-tight bg-gradient-to-r from-blue-400 to-indigo-300 bg-clip-text text-transparent">
+            Storage Depot
+          </span>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="index.html" class="hover:text-blue-400 transition-colors duration-150 font-medium text-gray-300">Home</a>
+          <a href="contact.html" class="hover:text-blue-400 transition-colors duration-150 font-medium text-gray-300">Contact Us</a>
+          <a href="complaint.html" class="hover:text-blue-400 transition-colors duration-150 font-medium text-gray-300">File Complaint</a>
+        </nav>
+        <div class="flex md:hidden">
+          <button id="menu-btn" type="button" class="text-gray-400 hover:text-white focus:outline-none">
+            <i data-lucide="menu" id="hamburger-icon" class="w-6 h-6"></i>
+            <i data-lucide="x" id="close-icon" class="w-6 h-6 hidden"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700 px-2 pt-2 pb-4 space-y-1">
+      <a href="index.html" class="block px-3 py-2 rounded-md font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
+      <a href="contact.html" class="block px-3 py-2 rounded-md font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact Us</a>
+      <a href="complaint.html" class="block px-3 py-2 rounded-md font-medium text-gray-300 hover:bg-gray-700 hover:text-white">File Complaint</a>
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <nav class="flex text-xs text-gray-500 uppercase tracking-widest mb-8 space-x-2" aria-label="Breadcrumb">
+      <a href="index.html" class="hover:text-blue-600 transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-gray-900 font-medium">Encrypted USB</span>
+    </nav>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-10">
+      
+      <div class="space-y-4">
+        <div class="bg-gray-100 rounded-xl overflow-hidden flex items-center justify-center p-8 relative h-96">
+          <i data-lucide="key" class="w-24 h-24 text-red-600 opacity-60"></i>
+          <span class="absolute top-4 left-4 bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-1 rounded">Military Secure</span>
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+          <div class="bg-gray-50 border border-red-100 p-4 rounded-lg flex justify-center items-center h-20">
+            <i data-lucide="shield-alert" class="w-6 h-6 text-red-500"></i>
+            <span class="text-xs font-semibold text-gray-600 ml-1.5">FIPS 140-2 L3</span>
+          </div>
+          <div class="bg-gray-50 border border-gray-100 p-4 rounded-lg flex justify-center items-center h-20">
+            <i data-lucide="grid" class="w-6 h-6 text-blue-500"></i>
+            <span class="text-xs font-semibold text-gray-600 ml-1.5">PIN Keypad</span>
+          </div>
+          <div class="bg-gray-50 border border-gray-100 p-4 rounded-lg flex justify-center items-center h-20">
+            <i data-lucide="trash-2" class="w-6 h-6 text-red-500"></i>
+            <span class="text-xs font-semibold text-gray-600 ml-1.5">Self Destruct</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-between">
+        <div class="space-y-6">
+          <div>
+            <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">Aegis Shield AES-256 Keypad Encrypted Drive</h1>
+            <p class="text-lg text-red-600 font-medium mt-1">Status: High Security - Low Stock</p>
+          </div>
+
+          <div class="flex items-center space-x-6 border-y border-gray-100 py-4">
+            <div>
+              <p class="text-3xl font-black text-blue-600">$49.99 <span class="text-sm font-normal text-gray-400">/ secure module</span></p>
+            </div>
+            <div class="border-l border-gray-200 pl-6 flex items-center space-x-1.5 text-yellow-500">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <span class="font-bold text-gray-900 text-sm ml-1">4.9</span>
+              <span class="text-gray-400 text-xs">(78 military grade clearances)</span>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider">Product Description</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Say goodbye to data theft. The Aegis Shield USB drive delivers ultimate military-grade corporate security with AES-256 hardware level encryption. Built with an internal epoxy mold that cannot be breached physical-hack style, and featuring an on-board polymer button keypad to type in your user PIN BEFORE inserting into ports. No PC software or OS drivers required.
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="text-sm font-bold text-gray-900 uppercase tracking-wider">Key Storage Features</h3>
+            <ul class="space-y-2">
+              <li class="flex items-center text-sm text-gray-600">
+                <i data-lucide="check" class="w-4 h-4 text-red-500 mr-2 flex-shrink-0"></i>
+                Pure hardware encryption - independent of client operating system
+              </li>
+              <li class="flex items-center text-sm text-gray-600">
+                <i data-lucide="check" class="w-4 h-4 text-red-500 mr-2 flex-shrink-0"></i>
+                Pre-boot PIN validation using custom alphanumeric keypad buttons
+              </li>
+              <li class="flex items-center text-sm text-gray-600">
+                <i data-lucide="check" class="w-4 h-4 text-red-500 mr-2 flex-shrink-0"></i>
+                Anti-brute defense: wipes drive keys automatically after 10 failed entries
+              </li>
+            </ul>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="text-sm font-bold text-gray-100 uppercase tracking-wider text-black">Specifications</h3>
+            <div class="overflow-hidden border border-gray-100 rounded-lg">
+              <table class="min-w-full divide-y divide-gray-100 text-sm">
+                <tbody class="divide-y divide-gray-100">
+                  <tr class="bg-gray-50"><td class="px-4 py-2 font-semibold text-gray-700">Encryption Method</td><td class="px-4 py-2 text-gray-600">Hardware AES-XTS 256-bit controller</td></tr>
+                  <tr><td class="px-4 py-2 font-semibold text-gray-700">Standards</td><td class="px-4 py-2 text-gray-600">FIPS 140-2 Level 3 Accredited</td></tr>
+                  <tr class="bg-gray-50"><td class="px-4 py-2 font-semibold text-gray-700">Moisture Seal</td><td class="px-4 py-2 text-gray-600">IP68 certified waterproof aluminum casing</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-gray-100">
+          <a href="index.html#order-desk" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-150 inline-flex items-center justify-center space-x-2">
+            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            <span>Order This Item on Homepage</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs">
+      <p>&copy; 2026 Memory & Storage Depot. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    menuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      if (isHidden) {
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      } else {
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
